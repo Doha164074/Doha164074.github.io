@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Me - Doha Al-Twisat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navigation-bar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html" class="active-link">Contact Me</a>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        <section class="card contact-section">
+            <header class="contact-header">
+                <div class="contact-image-container">
+                    <img src="images/doha.jpg" alt="Doha Al-Twisat Signature" class="contact-header-image">
+                </div>
+                <h2>Get In Touch</h2>
+                <p>I'm eager to hear from you! Please use the form below for any inquiries or to simply say hi.</p>
+            </header>
+            
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_CODE" method="POST" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="_replyto" required> 
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Your Comments/Message *</label>
+                    <textarea id="comments" name="message" rows="5" required></textarea>
+                </div>
+                
+                <input type="hidden" name="_subject" value="New Portfolio Message from Doha Al-Twisat">
+                <input type="hidden" name="_cc" value="dnaltowaisat22@cit.just.edu.jo">
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting me! I have received your message and will respond as soon as possible.">
+
+                <button type="submit" class="submit-button">Submit Message</button>
+            </form>
+
+            <div class="social-links-section">
+                <h3>Connect with Me</h3>
+                <div class="social-icons">
+                    <a href="mailto:dnaltowaisat22@cit.just.edu.jo" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/doha-nasr-b36a73333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/share/15zCuYgtx9/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="tel:+962797241548" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Doha Al-Twisat. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function validateForm(event) {
+            
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const country = document.getElementById('country').value.trim();
+            const comments = document.getElementById('comments').value.trim();
+
+            
+            if (fullName === "" || email === "" || country === "" || comments === "") {
+                alert("Please fill in all the required fields marked with (*).");
+                event.preventDefault(); 
+                return false;
+            }
+
+                       alert("تم إرسال رسالتك بنجاح! شكراً لتواصلك.");
+            
+           
+                       return true;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+/* ===============================
+   Global Styles & Reset
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #004080; 
+    --secondary-color: #ff9933; 
+    --accent-color: #00bfff; 
+    --background-light: #f4f7f9; 
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: #333;
+    direction: ltr; 
+    text-align: left;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.icon-color {
+    color: var(--secondary-color);
+    margin-right: 8px;
+}
+
+/* ===============================
+   Navigation Bar
+   =============================== */
+.navigation-bar {
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.navigation-bar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-bar .nav-links a:hover,
+.navigation-bar .nav-links a.active-link {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* ===============================
+   Content Container & Cards
+   =============================== */
+.content-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    border-left: 5px solid var(--primary-color); 
+}
+
+/* ===============================
+   Hero Section (Home Page)
+   =============================== */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    border-left: 5px solid var(--secondary-color); 
+}
+
+.profile-photo-container {
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 0 5px var(--secondary-color); 
+}
+
+.header-content {
+    flex-grow: 1;
+    min-width: 300px;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.header-content h2 {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.major-info {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.contact-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+
+/* ===============================
+   Soft Skills Section
+   =============================== */
+.skills-section h3 {
+    margin-bottom: 15px;
+}
+.skills-section ul.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-section ul.skills-list li {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px; 
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.skills-section ul.skills-list li:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* ===============================
+   Table Section (Tools/Languages)
+   =============================== */
+.table-section h3 {
+    margin-bottom: 15px;
+}
+
+.responsive-table {
+    overflow-x: auto; 
+}
+
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table-section th, .table-section td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table-section th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.table-section tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-section td a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.table-section td a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   Future Vision & University Overview
+   =============================== */
+.future-vision-section p,
+.university-overview-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.university-overview-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.university-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.university-logo-container {
+    flex-shrink: 0;
+}
+
+.university-logo-container .small-logo {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ===============================
+   Contact Page Styles
+   =============================== */
+.contact-section {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contact-header-image {
+    width: 250px; 
+    height: 100px; 
+    object-fit: contain; 
+    border-radius: 8px; 
+    border: 4px solid var(--secondary-color);
+    margin-bottom: 15px;
+}}
+
+.contact-header h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Social Links Section */
+.social-links-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+}
+
+.social-links-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* ===============================
+   Footer
+   =============================== */
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* ===============================
+   Responsive Adjustments
+   =============================== */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-section .header-content {
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .skills-section ul.skills-list {
+        justify-content: center;
+    }
+    
+    .university-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation-bar .nav-links a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .content-container {
+        padding: 0 10px;
+    }
+
+    .skills-section ul.skills-list li {
+        width: 100%; 
+        text-align: center;
+    }
+    
+    .social-icons a {
+        margin: 0 10px;
+    }
+}
